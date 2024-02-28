@@ -26,6 +26,7 @@ http://www.voiptroubleshooter.com/open_speech/british.html
 #include <format_wav.h>
 
 #include <speex/speex.h>
+#include <config.h>
 
 #define FRAME_SIZE   160
 #define PACKAGE_SIZE 64
@@ -45,7 +46,7 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
     char buf[PACKAGE_SIZE];
 
     // Create a new encoder state in narrowband mode
-    printf("speex_encoder_init()\n");
+    //printf("speex_encoder_init()\n");
     void *encoder_state = speex_encoder_init(&speex_nb_mode);
 
     // Set quality
@@ -59,10 +60,12 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
     }
     FILE *fout = fopen(fout_name, "w");
 
+    /*
     fseek(fin, 0, SEEK_END);
     *sample_size = ftell(fin) - sizeof(wav_header_t);
     fseek(fin, 0, SEEK_SET);
     printf("sample_size:%d\n", *sample_size);
+    */
 
     wav_header_t wav_header;
     fread(&wav_header, 1, sizeof(wav_header), fin);
@@ -70,11 +73,15 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
 
     // Initialization of the structure that holds the bits
     SpeexBits bits;
-    printf("speex_bits_init()\n");
+    //printf("speex_bits_init()\n");
     speex_bits_init(&bits);
 
     int nbytes = speex_bits_nbytes(&bits);
-    printf("speex_bits_nbytes:nbytes:%d\n", nbytes);
+    //printf("speex_bits_nbytes:nbytes:%d\n", nbytes);
+
+    TickType_t tick2_tick1_ = 0;
+    TickType_t tick2_tick1 = 0;
+    printf("speex_encode:tick2 - tick1:");
 
     size_t enc_frame_size_ = 0;
     while (!feof(fin))
@@ -83,7 +90,7 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
         if (frame_size != FRAME_SIZE) // (feof(fin))
             break;
 
-        //TickType_t tikc1 = millis();
+        TickType_t tick1 = millis();
 
         // Flush all the bits in the struct so we can encode a new frame
         speex_bits_reset(&bits);
@@ -92,8 +99,13 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
         // Copy the bits to an array of char that can be written
         *enc_frame_size = speex_bits_write(&bits, buf, PACKAGE_SIZE);
 
-        //TickType_t tikc2 = millis();
-        //printf("speex_encode:tikc2 - tikc1:%ld\n", tikc2 - tikc1);
+        TickType_t tick2 = millis();
+        tick2_tick1 = tick2 - tick1;
+        if (tick2_tick1_ != tick2_tick1) {
+            tick2_tick1_ = tick2_tick1;
+            // printf("speex_encode:tick2 - tick1: %ld\n", tick2_tick1);
+            printf(" %ld", tick2_tick1);
+        }
 
         if (enc_frame_size_ == 0)
             enc_frame_size_ = *enc_frame_size;
@@ -102,11 +114,12 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
         // write to file
         fwrite(buf, 1, enc_frame_size_, fout);
     }
+    printf("\n");
     // Destroy the decoder state
-    printf("speex_encoder_destroy()\n");
+    //printf("speex_encoder_destroy()\n");
     speex_encoder_destroy(encoder_state);
     // Destroy the bit-stream struct
-    printf("speex_bits_destroy()\n");
+    //printf("speex_bits_destroy()\n");
     speex_bits_destroy(&bits);
 
     fclose(fout);
@@ -127,21 +140,21 @@ void speex_decode_(const char* fin_name, const char* fout_name, size_t sample_si
     char buf[PACKAGE_SIZE];
 
     // Create a new decoder state in narrowband mode
-    printf("speex_decoder_init(\n");
+    //printf("speex_decoder_init(\n");
     void *decoder_state = speex_decoder_init(&speex_nb_mode);
 
     // Set the perceptual enhancement on
     uint32_t tmp = 1;
-    printf("speex_decoder_ctl()\n");
+    //printf("speex_decoder_ctl()\n");
     speex_decoder_ctl(decoder_state, SPEEX_SET_ENH, &tmp);
 
 
     int32_t frame_size;
     speex_mode_query(&speex_nb_mode, SPEEX_MODE_FRAME_SIZE, &frame_size);
-    printf("speex_mode_query:frame_size:%ld\n", frame_size);
+    //printf("speex_mode_query:frame_size:%ld\n", frame_size);
     int32_t bits_per_frame;
     speex_mode_query(&speex_nb_mode, SPEEX_SUBMODE_BITS_PER_FRAME, &bits_per_frame);
-    printf("speex_mode_query:bits_per_frame:%ld\n", bits_per_frame);
+    //printf("speex_mode_query:bits_per_frame:%ld\n", bits_per_frame);
 
     speex_decoder_ctl(decoder_state, SPEEX_GET_FRAME_SIZE, &frame_size);
     printf("speex_decoder_ctl:frame_size:%ld\n", frame_size);
@@ -179,11 +192,11 @@ void speex_decode_(const char* fin_name, const char* fout_name, size_t sample_si
 
     // Initialization of the structure that holds the bits
     SpeexBits bits;
-    printf("speex_bits_init()\n");
+    //printf("speex_bits_init()\n");
     speex_bits_init(&bits);
 
     int nbytes = speex_bits_nbytes(&bits);
-    printf("speex_bits_nbytes:nbytes:%d\n", nbytes);
+    //printf("speex_bits_nbytes:nbytes:%d\n", nbytes);
 
     while (!feof(fin))
     {
@@ -195,15 +208,15 @@ void speex_decode_(const char* fin_name, const char* fout_name, size_t sample_si
             break;
         }
 
-        //TickType_t tikc1 = millis();
+        //TickType_t tick1 = millis();
 
         // Copy the data into the bit-stream struct
         speex_bits_read_from(&bits, buf, pkg_size);
         // Decode the data
         speex_decode_int(decoder_state, &bits, out);
 
-        //TickType_t tikc2 = millis();
-        //printf("speex_decode:tikc2 - tikc1:%ld\n", tikc2 - tikc1);
+        //TickType_t tick2 = millis();
+        //printf("speex_decode:tick2 - tick1:%ld\n", tick2 - tick1);
 
         // write to file
         fwrite(out, 2, FRAME_SIZE, fout);
@@ -212,10 +225,10 @@ void speex_decode_(const char* fin_name, const char* fout_name, size_t sample_si
             break;
     }
     // Destroy the decoder state
-    printf("speex_decoder_destroy()\n");
+    //printf("speex_decoder_destroy()\n");
     speex_decoder_destroy(decoder_state);
     // Destroy the bit-stream struct
-    printf("speex_bits_destroy()\n");
+    //printf("speex_bits_destroy()\n");
     speex_bits_destroy(&bits);
 
     fclose(fout);
@@ -225,8 +238,8 @@ void speex_decode_(const char* fin_name, const char* fout_name, size_t sample_si
 }
 
 void speex_encode_decode(const char *name, uint32_t quality) {
-    size_t sample_size;
-    size_t enc_frame_size;
+    size_t sample_size = 0;
+    size_t enc_frame_size = 0;
     char src_name[100];
     char spx_name[100];
     char wav_name[100];
@@ -246,6 +259,7 @@ void speex_encode_decode_task()
 
         speex_encode_decode("/sdcard/male", quality);
         speex_encode_decode("/sdcard/femal", quality);
+
         speex_encode_decode("/sdcard/mmt1", quality);
         speex_encode_decode("/sdcard/test", quality);
         speex_encode_decode("/sdcard/rwpcm", quality);
@@ -255,7 +269,6 @@ void speex_encode_decode_task()
         speex_encode_decode("/sdcard/uk20", quality);
         speex_encode_decode("/sdcard/uk27", quality);
         speex_encode_decode("/sdcard/uk51", quality);
-        /**/
     }
 
     printf("DONE\n");
@@ -370,6 +383,15 @@ void app_main()
     sdmmc_card_t *card;
     ESP_ERROR_CHECK(esp_vfs_fat_sdmmc_mount("/sdcard", &host, &slot_config, &mount_config, &card));
     sdmmc_card_print_info(stdout, card);
+
+    #ifdef FIXED_POINT
+    #warning FIXED_POINT
+    printf("FIXED_POINT\n");
+    #endif
+    #ifdef FLOATING_POINT
+    #warning FLOATING_POINT
+    printf("FLOATING_POINT\n");
+    #endif
 
     //xTaskCreate(wav_to_raw_task, "wav_to_raw_task", 4096 * 2, NULL, 5, NULL);
     //xTaskCreate(raw_to_wav_task, "raw_to_wav_task", 4096 * 2, NULL, 5, NULL);
