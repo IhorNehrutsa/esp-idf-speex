@@ -1,0 +1,521 @@
+FLOATING_POINT
+
+Name: SU04G
+Type: SDHC/SDXC
+Speed: 20.00 MHz (limit: 20.00 MHz)
+Size: 3781MB
+CSD: ver=2, sector_size=512, capacity=7744512 read_bl_len=9
+SSR: bus_width=4
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_0.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 7 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_0.spx to /sdcard/male_0.wav; sample_size:96000, enc_frame_size:6
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_0.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5 6 5
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_0.spx to /sdcard/femal_0.wav; sample_size:96000, enc_frame_size:6
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_1.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_1.spx to /sdcard/male_1.wav; sample_size:96000, enc_frame_size:10
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_1.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_1.spx to /sdcard/femal_1.wav; sample_size:96000, enc_frame_size:10
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_2.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_2.spx to /sdcard/male_2.wav; sample_size:96000, enc_frame_size:15
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_2.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 -17888 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7 8 7
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_2.spx to /sdcard/femal_2.wav; sample_size:96000, enc_frame_size:15
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_4.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_4.spx to /sdcard/male_4.wav; sample_size:96000, enc_frame_size:20
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_4.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9 8 9
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_4.spx to /sdcard/femal_4.wav; sample_size:96000, enc_frame_size:20
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_6.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_6.spx to /sdcard/male_6.wav; sample_size:96000, enc_frame_size:28
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_6.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 -17884 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12 11 12
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_6.spx to /sdcard/femal_6.wav; sample_size:96000, enc_frame_size:28
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_8.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_8.spx to /sdcard/male_8.wav; sample_size:96000, enc_frame_size:38
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_8.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9 10 9
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_8.spx to /sdcard/femal_8.wav; sample_size:96000, enc_frame_size:38
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_9.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_9.spx to /sdcard/male_9.wav; sample_size:96000, enc_frame_size:46
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_9.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 16 15 14 15 14 15 -17881 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 15 14 16 15
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_9.spx to /sdcard/femal_9.wav; sample_size:96000, enc_frame_size:46
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/male.wav to /sdcard/male_10.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/male_10.spx to /sdcard/male_10.wav; sample_size:96000, enc_frame_size:62
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:-1
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+
+SPEEX: Start encode /sdcard/femal.wav to /sdcard/femal_10.spx
+speex_encoder_init()
+sample_size:96000
+WAV:print_wav_header:
+sample_size:96000
+bits_per_sample:16
+sample_rate:8000
+num_of_channels:1
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_encode:tikc2 - tikc1: 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13 12 13
+speex_encoder_destroy()
+speex_bits_destroy()
+SPEEX: Done encode
+SPEEX: Start decode /sdcard/femal_10.spx to /sdcard/femal_10.wav; sample_size:96000, enc_frame_size:62
+speex_decoder_init(
+speex_decoder_ctl()
+speex_mode_query:frame_size:160
+speex_mode_query:bits_per_frame:0
+speex_decoder_ctl:frame_size:160
+speex_decoder_ctl:enh_enabled:1
+speex_decoder_ctl:rate:8000
+speex_decoder_ctl:bitrate:15000
+speex_decoder_ctl:submode_encoding:1
+speex_decoder_ctl:mode:5
+sample_size:96000
+speex_bits_init()
+speex_bits_nbytes:nbytes:0
+speex_decoder_destroy()
+speex_bits_destroy()
+SPEEX: Done decode
+DONE
