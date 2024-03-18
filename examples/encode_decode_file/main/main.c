@@ -75,7 +75,7 @@ void speex_encode_(const char* fin_name, const char* fout_name, uint32_t quality
     //printf("speex_bits_init()\n");
     speex_bits_init(&bits);
 
-    int nbytes = speex_bits_nbytes(&bits);
+    //int nbytes = speex_bits_nbytes(&bits);
     //printf("speex_bits_nbytes:nbytes:%d\n", nbytes);
 
     TickType_t tick2_tick1_ = 0;
@@ -194,7 +194,7 @@ void speex_decode_(const char* fin_name, const char* fout_name, size_t sample_si
     //printf("speex_bits_init()\n");
     speex_bits_init(&bits);
 
-    int nbytes = speex_bits_nbytes(&bits);
+    //int nbytes = speex_bits_nbytes(&bits);
     //printf("speex_bits_nbytes:nbytes:%d\n", nbytes);
 
     while (!feof(fin))
