@@ -26,7 +26,6 @@ http://www.voiptroubleshooter.com/open_speech/british.html
 #include <format_wav.h>
 
 #include <speex/speex.h>
-#include <config.h>
 
 #define FRAME_SIZE   160
 #define PACKAGE_SIZE 64
